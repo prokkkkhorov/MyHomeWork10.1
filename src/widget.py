@@ -13,14 +13,18 @@ def mask_account_card(data_card: str) -> str:
     name_of_card = "".join(alpha for alpha in data_card if alpha.isalpha())
     number_of_card = "".join(digit for digit in data_card if digit.isdigit())
 
+    masked_data_card = ""
+
     if name_of_card != "Счет":
-        return f'{name_of_card} {number_of_card[0:4]} {number_of_card[4:6]}** **** {number_of_card[-4:]}'
+        masked_data_card = f"{name_of_card} {number_of_card[0:4]} {number_of_card[4:6]}** **** {number_of_card[-4:]}"
     elif name_of_card == "Счет":
-        return f'{name_of_card} **{number_of_card[-4:]}'
+        masked_data_card = f"{name_of_card} **{number_of_card[-4:]}"
+
+    return masked_data_card
 
 
 if __name__ == "__main__":
-    print(mask_account_card('Счет 73654108430135874305'))
+    print(mask_account_card('Maestro 1596837868705199'))
 
 
 def get_date(date: str) -> str:
