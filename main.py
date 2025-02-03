@@ -17,7 +17,7 @@ list_of_dict = [
 
 from src.masks import get_mask_account, get_mask_card_number
 from src.widget import get_date, mask_account_card
-from src.processing import filter_by_state
+from src.processing import filter_by_state, sort_by_date
 
 if __name__ == "__main__":
     masked_card = get_mask_card_number(7000792289606361)
@@ -33,5 +33,7 @@ if __name__ == "__main__":
     print(reform_date)
 
     filter_by_state_main = filter_by_state(list_of_dict)
+    sorted_date = sort_by_date(list_of_dict)
 
     print(filter_by_state_main)
+    print(sorted_date)
