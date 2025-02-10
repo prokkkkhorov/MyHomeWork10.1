@@ -32,7 +32,7 @@ if __name__ == "__main__":
     print(masked_account_card)
     print(reform_date)
 
-    filter_by_state_main = filter_by_state(list_of_dict)
+    filter_by_state_main = filter_by_state(list_of_dict, state='EXECUTED')
     sorted_date = sort_by_date(list_of_dict)
 
     print(filter_by_state_main)

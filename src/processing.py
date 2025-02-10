@@ -1,4 +1,4 @@
-def filter_by_state(my_list: list, state='EXECUTED') -> list:
+def filter_by_state(my_list: list, state) -> list:
     return [elem for elem in my_list if elem['state'] == state]
 
 

@@ -12,7 +12,14 @@ from src.widget import mask_account_card, get_date
     ('Счет 73654108430135874305', 'Счет **4305')
 ])
 def test_mask_account_card(value, expected):
+    """
+    Функция для тестирования зашифровки данных карт и счетов из модуля widget.py
+    """
     assert mask_account_card(value) == expected
 
 def test_get_date(get_date_func):
+    """
+    Функция для тестирования перевода даты из вида ISO 8601
+    в привычный европейский из модуля widget.py
+    """
     assert get_date('2024-03-11T02:26:18.671407') == get_date_func
