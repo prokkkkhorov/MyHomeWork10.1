@@ -20,6 +20,7 @@
 
 1. Для запуска тестов используйте команду `pytest`:
 2. Пример тестов:
+```
 import pytest
 from src.widget import mask_account_card, get_date
 
@@ -38,3 +39,4 @@ def test_mask_account_card(value, expected):
     Функция для тестирования зашифровки данных карт и счетов из модуля widget.py
     """
     assert mask_account_card(value) == expected
+```
