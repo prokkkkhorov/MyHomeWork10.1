@@ -1,5 +1,5 @@
 def mask_account_card(data_card: str) -> str:
-    """" Функция для зашифровки данных карт и счетов """
+    """ Функция для зашифровки данных карт и счетов """
     name_of_card = "".join(alpha for alpha in data_card if alpha.isalpha())
     number_of_card = "".join(digit for digit in data_card if digit.isdigit())
 
@@ -14,5 +14,5 @@ def mask_account_card(data_card: str) -> str:
 
 
 def get_date(date: str) -> str:
-    """ Функция для перевода даты из вида ISO 8601 в привычный европейский"""
+    """ Функция для перевода даты из вида ISO 8601 в привычный европейский """
     return f"{date[8:10]}.{date[5:7]}.{date[0:4]}"
