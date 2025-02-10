@@ -1,9 +1,8 @@
-# import pytest
 from src.masks import get_mask_card_number, get_mask_account
 
-# @pytest.fixture()
-def test_get_mask_card_number():
-    assert get_mask_card_number(7000792289606361) == "7000 79** **** 6361"
 
-def test_get_mask_account():
-    assert get_mask_account(73654108430135874305) == "**4305"
+def test_get_mask_card_number(card_number_func):
+    assert get_mask_card_number(7000792289606361) == card_number_func
+
+def test_get_mask_account(mask_account_func):
+    assert get_mask_account(73654108430135874305) == mask_account_func

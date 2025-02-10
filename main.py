@@ -26,7 +26,7 @@ if __name__ == "__main__":
     print(masked_card)
     print(masked_account)
 
-    masked_account_card = mask_account_card('Visa Platinum 8990922113665229')
+    masked_account_card = mask_account_card('Счет 73654108430135874305')
     reform_date = get_date('2024-03-11T02:26:18.671407')
 
     print(masked_account_card)
