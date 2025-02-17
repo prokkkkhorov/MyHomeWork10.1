@@ -87,7 +87,7 @@ from src.generators import filter_by_currency, transaction_descriptions, card_nu
                          )
 def test_filter_by_currency(transactions, currency, expected_result):
     """
-    Функция для тестирования возврат итератора, который поочередно выдает транзакции,
+    Функция для тестирования возврата итератора, который поочередно выдает транзакции,
     где валюта операции соответствует заданной.
     """
     result = list(filter_by_currency(transactions, currency))
