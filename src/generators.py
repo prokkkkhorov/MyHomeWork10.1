@@ -6,8 +6,11 @@ def filter_by_currency(list_of_transactions, currency):
     где валюта операции соответствует заданной.
     """
     for elem in list_of_transactions:
-        if elem["operationAmount"]["currency"]["code"] == currency:
-            yield elem
+        # Проверка наличия полей перед фильтрацией
+        if "operationAmount" in elem and "currency" in elem["operationAmount"]:
+            if elem["operationAmount"]["currency"]["code"] == currency:
+                yield elem
+
 
 
 def transaction_descriptions(list_of_transactions):
@@ -24,6 +27,5 @@ def card_number_generator(start, stop):
     Функция для генерации номера карты
     """
     for number in range(start, stop + 1):
-        card_number = f"{number:016}"
+        card_number = f"{number:0>16}"
         yield f"{card_number[:4]} {card_number[4:8]} {card_number[8:12]} {card_number[12:]}"
-
