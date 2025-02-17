@@ -1,28 +1,26 @@
 import random
 
-def filter_by_currency(list_of_transactions, currency):
+def filter_by_currency(list_of_transactions: list, currency: str) -> str:
     """
     Функция должна возвращать итератор, который поочередно выдает транзакции,
     где валюта операции соответствует заданной.
     """
     for elem in list_of_transactions:
-        # Проверка наличия полей перед фильтрацией
-        if "operationAmount" in elem and "currency" in elem["operationAmount"]:
-            if elem["operationAmount"]["currency"]["code"] == currency:
-                yield elem
+        if elem["operationAmount"]["currency"]["code"] == currency:
+            yield elem
 
 
-
-def transaction_descriptions(list_of_transactions):
+def transaction_descriptions(list_of_transactions: list, description: str) -> str:
     """
     Функция принимает список словарей с транзакциями
     и возвращает описание каждой операции по очереди.
     """
     for elem in list_of_transactions:
-        yield elem["description"]
+        if elem["description"] == description:
+            yield elem
 
 
-def card_number_generator(start, stop):
+def card_number_generator(start: int, stop: int) -> str:
     """
     Функция для генерации номера карты
     """

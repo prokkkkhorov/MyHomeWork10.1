@@ -126,7 +126,7 @@ if __name__ == "__main__":
     print("__________")
 
     usd_transactions = filter_by_currency(transactions, "USD")
-    for _ in range(2):
+    for _ in range(3):
         print(next(usd_transactions))
 
     print("__________")
