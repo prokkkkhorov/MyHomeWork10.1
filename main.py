@@ -107,15 +107,11 @@ if __name__ == "__main__":
     print(masked_card)
     print(masked_account)
 
-    print("__________")
-
     masked_account_card = mask_account_card('Visa Platinum 8990922113665229')
     reform_date = get_date('2024-03-11T02:26:18.671407')
 
     print(masked_account_card)
     print(reform_date)
-
-    print("__________")
 
     filter_by_state_main = filter_by_state(list_of_dict)
     sorted_date = sort_by_date(list_of_dict)
@@ -123,19 +119,13 @@ if __name__ == "__main__":
     print(filter_by_state_main)
     print(sorted_date)
 
-    print("__________")
-
     usd_transactions = filter_by_currency(transactions, "USD")
     for _ in range(3):
         print(next(usd_transactions))
 
-    print("__________")
-
     descriptions = transaction_descriptions(transactions)
     for _ in range(5):
         print(next(descriptions))
-
-    print("__________")
 
     for card_number in card_number_generator(1, 5):
         print(card_number)

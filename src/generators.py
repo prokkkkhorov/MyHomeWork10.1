@@ -10,14 +10,13 @@ def filter_by_currency(list_of_transactions: list, currency: str) -> str:
             yield elem
 
 
-def transaction_descriptions(list_of_transactions: list, description: str) -> str:
+def transaction_descriptions(list_of_transactions: list) -> str:
     """
     Функция принимает список словарей с транзакциями
     и возвращает описание каждой операции по очереди.
     """
     for elem in list_of_transactions:
-        if elem["description"] == description:
-            yield elem
+        yield elem["description"]
 
 
 def card_number_generator(start: int, stop: int) -> str:
