@@ -87,7 +87,8 @@ from src.generators import filter_by_currency, transaction_descriptions, card_nu
                          )
 def test_filter_by_currency(transactions, currency, expected_result):
     """
-    Тестируем функцию filter_by_currency с параметризацией.
+    Функция для тестирования возврат итератора, который поочередно выдает транзакции,
+    где валюта операции соответствует заданной.
     """
     result = list(filter_by_currency(transactions, currency))
 
@@ -115,7 +116,7 @@ def test_transaction_descriptions(transactions, expected_description):
 
 def test_card_number_generator(card_number_generator_func1):
     """
-    Функция для тестирования генерации номера карты
+    Функция для тестирования генерации номера карты.
     """
     start, stop = card_number_generator_func1
     expected = [

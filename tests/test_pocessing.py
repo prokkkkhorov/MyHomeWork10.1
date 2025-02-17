@@ -21,7 +21,7 @@ list_of_dict = [
 def test_filter_by_state(state, expected):
     """
     Функция для тестирования сортировки списка словарей
-    по статусу из модуля processing.py
+    по статусу из модуля processing.py.
     """
     assert filter_by_state(list_of_dict, state) == expected
 
@@ -41,6 +41,6 @@ def test_filter_by_state(state, expected):
 ])
 def test_sort_by_date(reverse, expected):
     """
-    Функция для тестирования сортировки списка словарей по дате из модуля processing.py
+    Функция для тестирования сортировки списка словарей по дате из модуля processing.py.
     """
     assert sort_by_date(list_of_dict, reverse) == expected
