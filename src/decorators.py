@@ -9,7 +9,7 @@ def log(filename: Optional[str] = None) -> Callable:
                 result = func(*args, **kwargs)
                 time_after = time()
                 duration = time_after - time_before
-                message = f"{func.__name__} duration: {duration}\n"
+                message = f"{func.__name__} ok\n"
                 if not filename:
                     print(message)
                 else:
@@ -23,6 +23,7 @@ def log(filename: Optional[str] = None) -> Callable:
                 else:
                     with open(filename, 'a', encoding='utf-8') as file:
                         file.write(message)
+                raise e
         return wrapper
     return my_decorator
 
@@ -32,4 +33,4 @@ def my_function(x, y):
     return x + y
 
 
-print(my_function(1, 2))
+# print(my_function(1, 2))
