@@ -2,6 +2,11 @@ from time import time
 from typing import Optional, Callable
 
 def log(filename: Optional[str] = None) -> Callable:
+    """
+    Декоратор для расчета времени выполнения функции и выведения
+    результатов в консоль и текстовый "mylog.txt" файл, а также для
+    вывода ошибок в консоль или "mylog.txt" файл, в случае неправильной работы функции
+    """
     def my_decorator(func):
         def wrapper(*args, **kwargs):
             try:
