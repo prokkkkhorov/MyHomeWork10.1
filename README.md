@@ -14,6 +14,8 @@
 - Функция для возврата итератора, который поочередно выдает транзакции, где валюта операции соответствует заданной.
 - Функция для принятия списка словарей с транзакциями и возвращения описания каждой операции по очереди.
 - Функция для генерации номера карты.
+- Декоратор для расчета времени выполнения функции и вывода результатов в консоль и текстовый "mylog.txt" файл, а также для
+  вывода ошибок в консоль или "mylog.txt" файл, в случае неправильной работы функции
 
 ## Структура проекта
 
@@ -81,4 +83,18 @@ def test_transaction_descriptions(transactions, expected_description):
     """
     result = list(transaction_descriptions(transactions))
     assert result == expected_description
+```
+2.3 Тестирование декоратора...
+```
+def test_log_error_console(capsys):
+
+    @log()
+    def foo(x, y):
+        return x + y
+
+    with pytest.raises(TypeError):
+        foo(1, "2")
+
+    message = capsys.readouterr()
+    assert "foo TypeError duration: 0" in message.out
 ```
