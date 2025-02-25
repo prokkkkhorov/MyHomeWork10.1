@@ -22,7 +22,7 @@ def log(filename: Optional[str] = None) -> Callable:
                         file.write(message)
                 return result
             except Exception as e:
-                message = f"{func.__name__} {type(e).__name__} duration: 0\n"
+                message = f"{func.__name__} {type(e).__name__}. Inputs {args}, {kwargs}\n"
                 if not filename:
                     print(message)
                 else:
@@ -38,4 +38,4 @@ def my_function(x, y):
     return x + y
 
 
-# print(my_function(1, 2))
+# print(my_function(1, '2'))
