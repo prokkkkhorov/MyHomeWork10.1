@@ -12,7 +12,7 @@ def test_log_error_console(capsys):
         foo(1, "2")
 
     message = capsys.readouterr()
-    assert "foo TypeError duration: 0" in message.out
+    assert "foo TypeError. Inputs (1, '2'), {}" in message.out
 
 def test_log_file_success(capsys):
 
