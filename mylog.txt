@@ -32,3 +32,36 @@ foo ok
 my_function TypeError. Inputs (1, '2'), {}
 my_function TypeError. Inputs (1, '2'), {}
 foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
+foo ok
